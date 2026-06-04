@@ -4,49 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="{{ "/" | relative_url }}">
+        <span class="brand-mark" aria-hidden="true">DVP</span>
+        <span>
+          <span class="brand-name">{{ site.title }}</span>
+          <span class="brand-subtitle">Why We Vax research project</span>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#survey-profiles">12 profiles</a>
+        <a href="#bridge">12 to 5</a>
+        <a href="#map">Map</a>
+        <a href="#method">Method</a>
+        <a href="#team">Team</a>
+      </nav>
+    </header>
 
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-
-      </header>
-      <section>
-
+    <main id="main">
       {{ content }}
+    </main>
 
-      </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-
-          <p>
-          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-          </p>
-          <p>
-            
-          </p>
-          <p>
-            Utrecht University. 
-          </p>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <footer class="site-footer">
+      <p>
+        Dutch Vaccination Profiles is a collaboration between Utrecht University
+        and Amsterdam UMC, funded through ZonMw pandemic preparedness research.
+      </p>
+      <p class="footer-links">
+        <a href="https://osf.io/y3qgt/?view_only=bc485ce658214be9bde9e35ea76ddec8">OSF preregistration</a>
+        <span aria-hidden="true">/</span>
+        <a href="https://github.com/DutchVaxProfiles">GitHub organization</a>
+      </p>
+    </footer>
   </body>
 </html>
