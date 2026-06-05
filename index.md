@@ -14,8 +14,8 @@ layout: default
     broader mapped profile groups that can support local pandemic preparedness.
   </p>
   <div class="hero-actions" aria-label="Primary page links">
-    <a class="button primary" href="#map">View the wijk map</a>
-    <a class="button secondary" href="#survey-profiles">Compare the 12 survey profiles</a>
+    <a class="button primary" href="#survey-profiles">Compare the 12 survey profiles</a>
+    <a class="button secondary" href="#map">View the wijk map</a>
   </div>
 </section>
 
@@ -43,74 +43,33 @@ layout: default
     <h2>How the pieces connect</h2>
     <p>
       The project starts with psychological detail and then asks what can be
-      mapped responsibly. That distinction is central: the survey profiles are
-      for explanation; the mapped groups are for aggregated, place-based
-      preparedness.
+      mapped responsibly. Follow the steps below to jump to the main results:
+      the 12 survey profiles, the 5 mapped groups, and the lessons for
+      vaccination practice and research.
     </p>
   </div>
-  <ol class="method-steps">
-    <li><strong>Discover decision profiles.</strong> LISS survey data are used to identify 12 profiles from beliefs about COVID-19, beliefs about vaccination, social values, and individual values.</li>
-    <li><strong>Characterize the profiles.</strong> Profiles are compared on trust, decision-making styles, health literacy, subjective knowledge, demographics, and vaccination intentions.</li>
-    <li><strong>Model broader mapped groups.</strong> Survey-derived profile information is linked to CBS registry variables and combined into 5 broader profile groups for regional estimation.</li>
-    <li><strong>Support preparedness.</strong> The resulting profile logic can help practitioners think about where different kinds of vaccination support may be needed.</li>
-  </ol>
-</section>
-
-<section id="map" class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">Study 2</p>
-    <h2>Mapping vaccination profile groups across Dutch wijken</h2>
-    <p>
-      The map shows five broad profile groups at wijk level. These five groups
-      combine the twelve survey profiles from Study 1 into three positive
-      groups, one neutral group, and one negative group. This is the key
-      modelling compromise: less psychological nuance than the 12-profile
-      survey solution, but a more reliable basis for mapping with registry data.
-    </p>
+  <div class="method-diagram" aria-label="Project method diagram">
+    <a class="method-node" href="#survey-profiles">
+      <span class="method-number">1</span>
+      <strong>Discover 12 survey profiles</strong>
+      <small>LISS survey measures capture beliefs, values, norms, and intentions.</small>
+    </a>
+    <a class="method-node" href="#survey-profiles">
+      <span class="method-number">2</span>
+      <strong>Characterize differences</strong>
+      <small>Profiles are compared on trust, decision style, knowledge, and demographics.</small>
+    </a>
+    <a class="method-node" href="#map">
+      <span class="method-number">3</span>
+      <strong>Map 5 broader groups</strong>
+      <small>CBS-linked variables support a more aggregated wijk-level view.</small>
+    </a>
+    <a class="method-node" href="#lessons">
+      <span class="method-number">4</span>
+      <strong>Translate into lessons</strong>
+      <small>The results guide questions for communication, planning, and preparedness.</small>
+    </a>
   </div>
-
-  <div class="profile-groups map-groups" aria-label="Mapped profile group families">
-    <article>
-      <h3>Three positive mapped groups</h3>
-      <p>
-        Placeholder to be described when the final Study 2 group labels are
-        fixed. These groups combine survey profiles with generally positive
-        vaccination intentions.
-      </p>
-    </article>
-    <article>
-      <h3>One neutral mapped group</h3>
-      <p>
-        Placeholder to be described. This group represents profiles where
-        intentions and beliefs are more mixed and may be sensitive to context.
-      </p>
-    </article>
-    <article>
-      <h3>One negative mapped group</h3>
-      <p>
-        Placeholder to be described. This group combines profiles with lower
-        vaccination intention and stronger concerns about vaccination.
-      </p>
-    </article>
-  </div>
-
-  <details class="plot-details map-note" open>
-    <summary>How to read the current Study 2 map</summary>
-    <p>
-      The current Study 2 map is not the real CBS-linked model output yet. It is
-      included so the team can test the interface, labels, colour scale, and
-      practitioner-facing story before the final wijk estimates are added.
-      Values are percentages, shown at aggregate level only; missing values are
-      shown in gray.
-    </p>
-  </details>
-
-  <div class="map-frame">
-    <iframe title="Dutch vaccination profile group wijk map" src="https://dutchvaxprofiles.github.io/map-explorer/" loading="lazy"></iframe>
-  </div>
-  <p class="map-fallback">
-    <a href="https://dutchvaxprofiles.github.io/map-explorer/">Open the map in a separate tab</a>.
-  </p>
 </section>
 
 <section id="survey-profiles" class="content-section">
@@ -159,91 +118,96 @@ layout: default
     <div>
       <h3>Profile size and July 2021 vaccination intention</h3>
       <p>
-        Wider boxes represent larger profiles. The fill colour tracks July 2021
-        vaccination intention from low red to high green. The left edge marks
-        the profile family: positive, neutral, or negative.
+        Wider boxes represent larger profile shares. The fill colour tracks
+        July 2021 vaccination intention from lower blue to higher red. The left
+        edge marks the profile family: positive, neutral, or negative.
       </p>
     </div>
     <div class="profile-legend" aria-label="Profile card legend">
+      <span class="intention-scale"><i></i>Lower to higher intention</span>
       <span><i class="legend-edge positive-edge"></i>Positive edge</span>
       <span><i class="legend-edge neutral-edge"></i>Neutral edge</span>
       <span><i class="legend-edge negative-edge"></i>Negative edge</span>
     </div>
   </div>
 
-  <div class="profile-mosaic" aria-label="Twelve survey profiles by sample size and vaccination intention">
-    <article class="profile-card" style="--n: 178; --edge: #1f7a63; --intent-bg: #dff1e8;">
-      <div class="profile-card-top"><span>Profile 1</span><span>Positive</span></div>
-      <p class="profile-card-intention">93.11% July intention</p>
+  <div class="profile-mosaic" aria-label="Twelve survey profiles by share and vaccination intention">
+    <div class="profile-mosaic-row profile-mosaic-row--positive" aria-label="Positive survey profiles">
+    <article class="profile-card" style="--span: 2; --edge: #1f7a63; --intent-bg: #e9b8b5;">
+      <div class="profile-card-top"><span>P1</span><span>Positive</span></div>
+      <p class="profile-card-share">6.9% share</p>
+      <p class="profile-card-intention">93.1% July intention</p>
       <p>Strong positive beliefs and a clear moral or social pro-vaccination signal.</p>
-      <dl><dt>N</dt><dd>178</dd><dt>Share</dt><dd>6.9%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 287; --edge: #1f7a63; --intent-bg: #e8f1df;">
-      <div class="profile-card-top"><span>Profile 2</span><span>Positive</span></div>
-      <p class="profile-card-intention">84.64% July intention</p>
+    <article class="profile-card" style="--span: 2; --edge: #1f7a63; --intent-bg: #efd0ca;">
+      <div class="profile-card-top"><span>P2</span><span>Positive</span></div>
+      <p class="profile-card-share">11.1% share</p>
+      <p class="profile-card-intention">84.6% July intention</p>
       <p>Generally accepting, with a more mixed or less decisive profile than the strongest positive groups.</p>
-      <dl><dt>N</dt><dd>287</dd><dt>Share</dt><dd>11.1%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 331; --edge: #1f7a63; --intent-bg: #dcf0e7;">
-      <div class="profile-card-top"><span>Profile 3</span><span>Positive</span></div>
-      <p class="profile-card-intention">94.23% July intention</p>
+    <article class="profile-card" style="--span: 2; --edge: #1f7a63; --intent-bg: #e8b5b4;">
+      <div class="profile-card-top"><span>P3</span><span>Positive</span></div>
+      <p class="profile-card-share">12.8% share</p>
+      <p class="profile-card-intention">94.2% July intention</p>
       <p>Consistently positive vaccine beliefs, social norms, and perceived benefits.</p>
-      <dl><dt>N</dt><dd>331</dd><dt>Share</dt><dd>12.8%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 621; --edge: #1f7a63; --intent-bg: #e2f1e4;">
-      <div class="profile-card-top"><span>Profile 4</span><span>Positive</span></div>
-      <p class="profile-card-intention">88.64% July intention</p>
+    <article class="profile-card" style="--span: 4; --edge: #1f7a63; --intent-bg: #ecc4bf;">
+      <div class="profile-card-top"><span>P4</span><span>Positive</span></div>
+      <p class="profile-card-share">24.0% share</p>
+      <p class="profile-card-intention">88.6% July intention</p>
       <p>Largest profile; broadly accepting with moderately strong positive beliefs.</p>
-      <dl><dt>N</dt><dd>621</dd><dt>Share</dt><dd>24.0%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 242; --edge: #1f7a63; --intent-bg: #edf1dc;">
-      <div class="profile-card-top"><span>Profile 5</span><span>Positive</span></div>
-      <p class="profile-card-intention">81.72% July intention</p>
+    <article class="profile-card" style="--span: 2; --edge: #1f7a63; --intent-bg: #f1d8d0;">
+      <div class="profile-card-top"><span>P5</span><span>Positive</span></div>
+      <p class="profile-card-share">9.4% share</p>
+      <p class="profile-card-intention">81.7% July intention</p>
       <p>Positive overall, but with more room for practical questions or ambivalent feelings.</p>
-      <dl><dt>N</dt><dd>242</dd><dt>Share</dt><dd>9.4%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 48; --edge: #1f7a63; --intent-bg: #dff1e8;">
-      <div class="profile-card-top"><span>Profile 6</span><span>Positive</span></div>
-      <p class="profile-card-intention">91.96% July intention</p>
-      <p>Small high-intention profile with a distinctive pattern of values and social beliefs.</p>
-      <dl><dt>N</dt><dd>48</dd><dt>Share</dt><dd>1.9%</dd></dl>
+    <article class="profile-card profile-card--tiny" style="--span: 1; --edge: #1f7a63; --intent-bg: #e9bcb8;">
+      <div class="profile-card-top"><span>P6</span><span>Positive</span></div>
+      <p class="profile-card-share">1.9% share</p>
+      <p class="profile-card-intention">92.0% intention</p>
+      <p>Small high-intention profile.</p>
     </article>
-    <article class="profile-card" style="--n: 300; --edge: #c0972e; --intent-bg: #f6e5b7;">
-      <div class="profile-card-top"><span>Profile 7</span><span>Neutral</span></div>
-      <p class="profile-card-intention">60.90% July intention</p>
+    </div>
+    <div class="profile-mosaic-row profile-mosaic-row--other" aria-label="Neutral and negative survey profiles">
+    <article class="profile-card" style="--span: 4; --edge: #c0972e; --intent-bg: #eadfda;">
+      <div class="profile-card-top"><span>P7</span><span>Neutral</span></div>
+      <p class="profile-card-share">11.6% share</p>
+      <p class="profile-card-intention">60.9% July intention</p>
       <p>Middle intention; support may depend on reducing uncertainty and clarifying benefits.</p>
-      <dl><dt>N</dt><dd>300</dd><dt>Share</dt><dd>11.6%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 299; --edge: #c0972e; --intent-bg: #f1e4ad;">
-      <div class="profile-card-top"><span>Profile 8</span><span>Neutral</span></div>
-      <p class="profile-card-intention">67.69% July intention</p>
+    <article class="profile-card" style="--span: 4; --edge: #c0972e; --intent-bg: #eee2dc;">
+      <div class="profile-card-top"><span>P8</span><span>Neutral</span></div>
+      <p class="profile-card-share">11.6% share</p>
+      <p class="profile-card-intention">67.7% July intention</p>
       <p>Neutral but somewhat more inclined toward vaccination than the other neutral profiles.</p>
-      <dl><dt>N</dt><dd>299</dd><dt>Share</dt><dd>11.6%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 89; --edge: #c0972e; --intent-bg: #f3cf9a;">
-      <div class="profile-card-top"><span>Profile 9</span><span>Neutral</span></div>
-      <p class="profile-card-intention">49.70% July intention</p>
+    <article class="profile-card profile-card--tiny" style="--span: 1; --edge: #c0972e; --intent-bg: #e7e2df;">
+      <div class="profile-card-top"><span>P9</span><span>Neutral</span></div>
+      <p class="profile-card-share">3.4% share</p>
+      <p class="profile-card-intention">49.7% intention</p>
       <p>More hesitant neutral profile where autonomy and freedom may weigh more strongly.</p>
-      <dl><dt>N</dt><dd>89</dd><dt>Share</dt><dd>3.4%</dd></dl>
     </article>
-    <article class="profile-card" style="--n: 71; --edge: #b5534b; --intent-bg: #f2c1b8;">
-      <div class="profile-card-top"><span>Profile 10</span><span>Negative</span></div>
-      <p class="profile-card-intention">19.48% July intention</p>
-      <p>Low intention profile marked by negative vaccine beliefs and low perceived benefits.</p>
-      <dl><dt>N</dt><dd>71</dd><dt>Share</dt><dd>2.7%</dd></dl>
+    <article class="profile-card profile-card--tiny" style="--span: 1; --edge: #b5534b; --intent-bg: #cad9e6;">
+      <div class="profile-card-top"><span>P10</span><span>Negative</span></div>
+      <p class="profile-card-share">2.7% share</p>
+      <p class="profile-card-intention">19.5% intention</p>
+      <p>Low intention profile.</p>
     </article>
-    <article class="profile-card" style="--n: 88; --edge: #b5534b; --intent-bg: #efb4ad;">
-      <div class="profile-card-top"><span>Profile 11</span><span>Negative</span></div>
-      <p class="profile-card-intention">15.24% July intention</p>
-      <p>Lowest intention profile, with stronger opposition and autonomy-related concerns.</p>
-      <dl><dt>N</dt><dd>88</dd><dt>Share</dt><dd>3.4%</dd></dl>
+    <article class="profile-card profile-card--tiny" style="--span: 1; --edge: #b5534b; --intent-bg: #c5d7e5;">
+      <div class="profile-card-top"><span>P11</span><span>Negative</span></div>
+      <p class="profile-card-share">3.4% share</p>
+      <p class="profile-card-intention">15.2% intention</p>
+      <p>Lowest intention profile.</p>
     </article>
-    <article class="profile-card" style="--n: 31; --edge: #b5534b; --intent-bg: #efc89f;">
-      <div class="profile-card-top"><span>Profile 12</span><span>Negative</span></div>
-      <p class="profile-card-intention">37.71% July intention</p>
-      <p>Small negative profile with slightly higher intention than the other negative profiles.</p>
-      <dl><dt>N</dt><dd>31</dd><dt>Share</dt><dd>1.2%</dd></dl>
+    <article class="profile-card profile-card--tiny" style="--span: 1; --edge: #b5534b; --intent-bg: #dbe2e6;">
+      <div class="profile-card-top"><span>P12</span><span>Negative</span></div>
+      <p class="profile-card-share">1.2% share</p>
+      <p class="profile-card-intention">37.7% intention</p>
+      <p>Small negative profile.</p>
     </article>
+    </div>
   </div>
 
   <details class="plot-details">
@@ -310,10 +274,67 @@ layout: default
   </details>
 </section>
 
-<section id="findings" class="content-section">
+<section id="map" class="content-section">
   <div class="section-heading">
-    <p class="eyebrow">Using the results</p>
-    <h2>What this offers vaccination practice and research</h2>
+    <p class="eyebrow">Study 2</p>
+    <h2>Mapping vaccination profile groups across Dutch wijken</h2>
+    <p>
+      The map shows five broad profile groups at wijk level. These five groups
+      combine the twelve survey profiles from Study 1 into three positive
+      groups, one neutral group, and one negative group. This is the key
+      modelling compromise: less psychological nuance than the 12-profile
+      survey solution, but a more reliable basis for mapping with registry data.
+    </p>
+  </div>
+
+  <div class="profile-groups map-groups" aria-label="Mapped profile group families">
+    <article>
+      <h3>Three positive mapped groups</h3>
+      <p>
+        Placeholder to be described when the final Study 2 group labels are
+        fixed. These groups combine survey profiles with generally positive
+        vaccination intentions.
+      </p>
+    </article>
+    <article>
+      <h3>One neutral mapped group</h3>
+      <p>
+        Placeholder to be described. This group represents profiles where
+        intentions and beliefs are more mixed and may be sensitive to context.
+      </p>
+    </article>
+    <article>
+      <h3>One negative mapped group</h3>
+      <p>
+        Placeholder to be described. This group combines profiles with lower
+        vaccination intention and stronger concerns about vaccination.
+      </p>
+    </article>
+  </div>
+
+  <details class="plot-details map-note" open>
+    <summary>How to read the current Study 2 map</summary>
+    <p>
+      The current Study 2 map is not the real CBS-linked model output yet. It is
+      included so the team can test the interface, labels, colour scale, and
+      practitioner-facing story before the final wijk estimates are added.
+      Values are percentages, shown at aggregate level only; missing values are
+      shown in gray.
+    </p>
+  </details>
+
+  <div class="map-frame">
+    <iframe title="Dutch vaccination profile group wijk map" src="https://dutchvaxprofiles.github.io/map-explorer/" loading="lazy"></iframe>
+  </div>
+  <p class="map-fallback">
+    <a href="https://dutchvaxprofiles.github.io/map-explorer/">Open the map in a separate tab</a>.
+  </p>
+</section>
+
+<section id="lessons" class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">Lessons</p>
+    <h2>What this means for vaccination practice and research</h2>
   </div>
   <div class="insight-list">
     <article>
@@ -334,7 +355,7 @@ layout: default
       </p>
     </article>
     <article>
-      <h3>Use maps for preparation, not labelling</h3>
+      <h3>Maps are preparation tools, not labels</h3>
       <p>
         The wijk map is an aggregate planning tool. It can guide questions,
         partnerships, and resource allocation, but it should not be used to

@@ -378,6 +378,19 @@ figcaption {
   gap: 0.35rem;
 }
 
+.intention-scale {
+  margin-bottom: 0.25rem;
+}
+
+.intention-scale i {
+  background: linear-gradient(90deg, #c5d7e5, #e7e2df, #e8b5b4);
+  border: 1px solid rgba(23, 35, 33, 0.18);
+  border-radius: 999px;
+  display: inline-block;
+  height: 0.7rem;
+  width: 4.5rem;
+}
+
 .profile-legend span {
   align-items: center;
   display: inline-flex;
@@ -404,11 +417,22 @@ figcaption {
 }
 
 .profile-mosaic {
-  align-items: stretch;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 0.85rem;
   margin-bottom: 2rem;
+}
+
+.profile-mosaic-row {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.profile-mosaic-row--positive {
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+}
+
+.profile-mosaic-row--other {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .profile-card {
@@ -418,10 +442,10 @@ figcaption {
   border-radius: var(--radius);
   box-shadow: 0 10px 24px rgba(22, 35, 33, 0.06);
   display: flex;
-  flex: var(--n) 1 11.5rem;
   flex-direction: column;
-  min-height: 13rem;
-  min-width: 11.5rem;
+  grid-column: span var(--span);
+  min-height: 12.2rem;
+  min-width: 0;
   padding: 0.9rem;
 }
 
@@ -437,40 +461,54 @@ figcaption {
   text-transform: uppercase;
 }
 
-.profile-card-intention {
+.profile-card-share {
   color: var(--ink);
-  font-size: 1.05rem;
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
   font-weight: 700;
   line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.profile-card-intention {
+  color: #40504d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
   margin-bottom: 0.45rem;
 }
 
-.profile-card p:not(.profile-card-intention) {
+.profile-card p:not(.profile-card-share):not(.profile-card-intention) {
   color: #31403d;
   font-size: 0.92rem;
   line-height: 1.45;
 }
 
-.profile-card dl {
-  display: grid;
-  gap: 0.15rem 0.65rem;
-  grid-template-columns: auto 1fr;
-  margin: auto 0 0;
+.profile-card--tiny {
+  border-left-width: 5px;
+  padding: 0.75rem;
 }
 
-.profile-card dt,
-.profile-card dd {
-  font-size: 0.85rem;
-  margin: 0;
+.profile-card--tiny .profile-card-top {
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 0.68rem;
+  gap: 0.15rem;
 }
 
-.profile-card dt {
-  color: var(--muted);
-  font-weight: 700;
+.profile-card--tiny .profile-card-top span:last-child {
+  display: none;
 }
 
-.profile-card dd {
-  color: var(--ink);
+.profile-card--tiny .profile-card-share {
+  font-size: 0.92rem;
+}
+
+.profile-card--tiny .profile-card-intention {
+  font-size: 0.78rem;
+}
+
+.profile-card--tiny p:not(.profile-card-share):not(.profile-card-intention) {
+  display: none;
 }
 
 .table-wrap {
@@ -552,43 +590,65 @@ figcaption {
   margin-top: 1.3rem;
 }
 
-.method-steps {
-  counter-reset: method;
+.method-diagram {
   display: grid;
-  gap: 0.85rem;
-  list-style: none;
-  margin: 1.4rem 0 0;
-  padding: 0;
-}
-
-.method-steps li {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  color: var(--muted);
-  padding: 1rem 1rem 1rem 3.2rem;
+  gap: 0.9rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 1.5rem;
   position: relative;
 }
 
-.method-steps li::before {
+.method-node {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  min-height: 11rem;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.method-node:not(:last-child)::after {
+  color: var(--muted);
+  content: ">";
+  font-weight: 700;
+  position: absolute;
+  right: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.method-node:hover,
+.method-node:focus {
+  border-color: var(--teal);
+  box-shadow: 0 10px 26px rgba(22, 35, 33, 0.08);
+  color: var(--ink);
+}
+
+.method-number {
   align-items: center;
   background: var(--accent-soft);
   border-radius: 50%;
   color: var(--accent);
-  content: counter(method);
-  counter-increment: method;
   display: inline-flex;
   font-weight: 700;
-  height: 1.7rem;
+  height: 1.8rem;
   justify-content: center;
-  left: 1rem;
-  position: absolute;
-  top: 1rem;
-  width: 1.7rem;
+  margin-bottom: 0.75rem;
+  width: 1.8rem;
 }
 
-.method-steps strong {
-  color: var(--ink);
+.method-node strong,
+.method-node small {
+  display: block;
+}
+
+.method-node small {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  margin-top: 0.45rem;
 }
 
 .team-grid {
@@ -704,6 +764,27 @@ figcaption {
     flex-wrap: wrap;
   }
 
+  .method-diagram {
+    grid-template-columns: 1fr;
+  }
+
+  .method-node {
+    min-height: auto;
+  }
+
+  .method-node:not(:last-child)::after {
+    bottom: -1rem;
+    content: "v";
+    left: 1.2rem;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .profile-mosaic-row {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
   .wide-figure img {
     min-width: 760px;
   }
@@ -723,8 +804,12 @@ figcaption {
     justify-content: center;
   }
 
+  .profile-card,
+  .profile-mosaic-row {
+    grid-column: 1 / -1;
+  }
+
   .profile-card {
-    flex-basis: 100%;
     min-height: auto;
   }
 
