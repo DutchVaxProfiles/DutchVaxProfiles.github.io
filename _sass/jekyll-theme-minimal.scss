@@ -209,7 +209,7 @@ main {
   align-items: center;
   display: grid;
   gap: clamp(2rem, 6vw, 5rem);
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
 }
 
 .hero-copy {
@@ -257,9 +257,9 @@ main {
   border: 1px solid var(--line);
   border-radius: 7px;
   display: inline-flex;
-  height: 3rem;
+  height: 3.8rem;
   justify-content: center;
-  padding: 0.35rem 0.55rem;
+  padding: 0.45rem 0.75rem;
   text-decoration: none;
 }
 
@@ -269,8 +269,8 @@ main {
 }
 
 .partner-logo img {
-  height: 2.15rem;
-  max-width: 8.6rem;
+  height: 2.75rem;
+  max-width: 10.5rem;
   object-fit: contain;
 }
 
@@ -278,7 +278,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: stretch;
-  max-width: 420px;
+  max-width: 500px;
   width: 100%;
 }
 
@@ -467,7 +467,7 @@ figcaption {
 }
 
 .intention-scale i {
-  background: linear-gradient(90deg, #d9786d, #f1dfd8, #b3d0eb);
+  background: linear-gradient(90deg, #de5f55 0%, #f2cf72 45%, #78acd3 100%);
   border: 1px solid rgba(23, 35, 33, 0.18);
   border-radius: 999px;
   display: inline-block;
@@ -523,11 +523,11 @@ figcaption {
   box-shadow: 0 10px 24px rgba(22, 35, 33, 0.06);
   display: flex;
   flex-direction: column;
-  height: 17rem;
+  height: 18rem;
   min-width: 0;
   overflow: hidden;
   overflow-wrap: anywhere;
-  padding: 1rem 1rem 3rem;
+  padding: 1rem 1rem 4.8rem;
   position: relative;
 }
 
@@ -543,11 +543,11 @@ figcaption {
   text-transform: uppercase;
 }
 
-.profile-card-share {
+.profile-card-title {
   color: var(--ink);
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1;
   margin-bottom: 0.25rem;
 }
 
@@ -559,19 +559,27 @@ figcaption {
   margin-bottom: 0.45rem;
 }
 
-.profile-card p:not(.profile-card-share):not(.profile-card-intention) {
+.profile-card p:not(.profile-card-intention) {
   color: #31403d;
   font-size: 0.9rem;
   line-height: 1.42;
 }
 
 .profile-size-marker {
+  align-items: center;
   background: rgba(23, 35, 33, 0.44);
   border: 1px solid rgba(23, 35, 33, 0.18);
   bottom: 0.9rem;
+  color: var(--surface);
+  display: inline-flex;
+  font-size: 0.72rem;
+  font-weight: 700;
   height: var(--marker-size);
+  justify-content: center;
+  line-height: 1;
   position: absolute;
   right: 0.9rem;
+  text-align: center;
   width: var(--marker-size);
 }
 
@@ -716,10 +724,17 @@ figcaption {
 }
 
 .method-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 1.2rem;
+}
+
+.method-actions .button {
+  align-items: center;
+  justify-content: center;
+  min-height: 3.25rem;
+  text-align: center;
 }
 
 .team-grid {
@@ -886,6 +901,10 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .method-actions {
+    grid-template-columns: 1fr;
+  }
+
   .method-node {
     min-height: auto;
   }
@@ -941,11 +960,12 @@ figcaption {
   }
 
   .partner-logo {
-    height: 2.8rem;
+    height: 3.15rem;
   }
 
   .partner-logo img {
-    max-width: 7.6rem;
+    height: 2.25rem;
+    max-width: 8.8rem;
   }
 
   .profile-mosaic {
