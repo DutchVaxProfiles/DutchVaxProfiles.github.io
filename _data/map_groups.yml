@@ -1,7 +1,7 @@
 groups:
   - class_name: "positive-group"
     title: "Three positive mapped groups"
-    text: "Placeholder to be described when the final Study 2 group labels are fixed. These groups combine survey profiles with generally positive vaccination intentions."
+    text: "Placeholder to be described when the final Study 2 group labels are fixed. These groups combine vaccination profiles with generally positive vaccination intentions."
   - class_name: "neutral-group"
     title: "One neutral mapped group"
     text: "Placeholder to be described. This group represents profiles where intentions and beliefs are more mixed and may be sensitive to context."

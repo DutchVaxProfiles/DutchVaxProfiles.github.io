@@ -1,6 +1,6 @@
 section:
   eyebrow: "Study 1"
-  title: "The 12 survey profiles"
+  title: "The 12 vaccination decision profiles"
   intro: "The first paper uses Latent Profile Analysis in a representative Dutch LISS sample to identify 12 COVID-19 vaccination decision profiles. These are population patterns, not labels for individual people. The 12-profile solution preserves the psychological nuance that is needed to understand why people with similar intentions may still need different kinds of communication and support."
 
 groups:
@@ -16,12 +16,12 @@ groups:
 
 visual:
   title: "Profile size and July 2021 vaccination intention"
-  text: "Each card has the same size. The fill colour tracks July 2021 vaccination intention from lower red to higher blue. The left edge marks the profile family, and the small square shows profile share with area proportional to the share."
+  text: "Each card has the same size. The fill colour tracks July 2021 vaccination intention from lower red to higher blue. The left edge marks the profile family, and the square label shows profile share with area proportional to the share."
   scale_label: "Lower intention (red) to higher intention (blue)"
   positive_edge_label: "Positive edge"
   neutral_edge_label: "Neutral edge"
   negative_edge_label: "Negative edge"
-  share_marker_label: "Square area = profile share"
+  share_marker_label: "Square area and label = profile share"
 
 profiles:
   - id: "P1"

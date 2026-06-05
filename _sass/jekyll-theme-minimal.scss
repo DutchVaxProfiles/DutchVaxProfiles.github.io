@@ -201,8 +201,8 @@ main {
 }
 
 .hero {
-  min-height: min(720px, calc(100svh - 5rem));
-  padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 7vw, 5rem);
+  min-height: 0;
+  padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem);
 }
 
 .hero-layout {
@@ -213,6 +213,7 @@ main {
 }
 
 .hero-copy {
+  max-width: 100%;
   min-width: 0;
 }
 
@@ -221,12 +222,14 @@ main {
   font-size: clamp(1.25rem, 2.3vw, 1.8rem);
   line-height: 1.35;
   max-width: 760px;
+  overflow-wrap: anywhere;
 }
 
 .hero p:not(.eyebrow):not(.lead) {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 780px;
+  overflow-wrap: anywhere;
 }
 
 .hero p.funder-note {
@@ -235,6 +238,15 @@ main {
   border-radius: var(--radius);
   color: var(--ink);
   margin: 1rem 0 0;
+  padding: 1rem;
+}
+
+.hero p.provisional-note {
+  background: #fff5d9;
+  border-left: 4px solid #d8b75a;
+  border-radius: var(--radius);
+  color: var(--ink);
+  margin: 1.15rem 0 0;
   padding: 1rem;
 }
 
@@ -257,9 +269,9 @@ main {
   border: 1px solid var(--line);
   border-radius: 7px;
   display: inline-flex;
-  height: 3.8rem;
+  height: 4.35rem;
   justify-content: center;
-  padding: 0.45rem 0.75rem;
+  padding: 0.5rem 0.8rem;
   text-decoration: none;
 }
 
@@ -269,8 +281,8 @@ main {
 }
 
 .partner-logo img {
-  height: 2.75rem;
-  max-width: 10.5rem;
+  height: 3.25rem;
+  max-width: 12rem;
   object-fit: contain;
 }
 
@@ -371,6 +383,11 @@ main {
 .content-section {
   border-top: 1px solid var(--line);
   padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.method-overview {
+  border-top: 0;
+  padding-top: 0;
 }
 
 .section-heading {
@@ -523,11 +540,11 @@ figcaption {
   box-shadow: 0 10px 24px rgba(22, 35, 33, 0.06);
   display: flex;
   flex-direction: column;
-  height: 18rem;
+  height: 17rem;
   min-width: 0;
   overflow: hidden;
   overflow-wrap: anywhere;
-  padding: 1rem 1rem 4.8rem;
+  padding: 1rem;
   position: relative;
 }
 
@@ -569,18 +586,24 @@ figcaption {
   align-items: center;
   background: rgba(23, 35, 33, 0.44);
   border: 1px solid rgba(23, 35, 33, 0.18);
-  bottom: 0.9rem;
   color: var(--surface);
   display: inline-flex;
-  font-size: 0.72rem;
+  flex-direction: column;
+  font-size: 0.7rem;
   font-weight: 700;
+  gap: 0.08rem;
   height: var(--marker-size);
   justify-content: center;
   line-height: 1;
-  position: absolute;
-  right: 0.9rem;
+  margin-top: auto;
   text-align: center;
   width: var(--marker-size);
+}
+
+.profile-size-marker small {
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .table-wrap {
@@ -960,12 +983,12 @@ figcaption {
   }
 
   .partner-logo {
-    height: 3.15rem;
+    height: 3.45rem;
   }
 
   .partner-logo img {
-    height: 2.25rem;
-    max-width: 8.8rem;
+    height: 2.45rem;
+    max-width: 8.4rem;
   }
 
   .profile-mosaic {
@@ -973,8 +996,8 @@ figcaption {
   }
 
   .profile-card {
-    height: auto;
-    min-height: 14.5rem;
+    height: 16rem;
+    min-height: 0;
   }
 
   .map-frame {

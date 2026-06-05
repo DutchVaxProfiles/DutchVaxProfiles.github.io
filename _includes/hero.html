@@ -9,11 +9,7 @@
       {% for paragraph in hero.paragraphs %}
         <p>{{ paragraph }}</p>
       {% endfor %}
-      <div class="hero-actions" aria-label="Primary page links">
-        {% for action in hero.actions %}
-          <a class="button {{ action.style }}" href="{{ action.href }}">{{ action.label }}</a>
-        {% endfor %}
-      </div>
+      <p class="provisional-note" role="note">{{ hero.provisional_note }}</p>
     </div>
     <aside class="hero-support" aria-label="Project partners and funding">
       {% include partner-logos.html class_name="hero-logos" %}

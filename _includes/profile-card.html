@@ -5,5 +5,8 @@
   <h3 class="profile-card-title">{{ include.profile.id }}</h3>
   <p class="profile-card-intention">{{ include.profile.intention }}</p>
   <p>{{ include.profile.note }}</p>
-  <span class="profile-size-marker" aria-label="{{ include.profile.share }} profile share">{{ include.profile.share }}</span>
+  <span class="profile-size-marker" aria-label="{{ include.profile.share }} profile share">
+    <strong>{{ include.profile.share }}</strong>
+    <small>share</small>
+  </span>
 </article>
