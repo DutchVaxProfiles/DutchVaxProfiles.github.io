@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">Amsterdam UMC logo</title>
+  <rect width="220" height="72" rx="8" fill="#ffffff"/>
+  <path d="M24 20h20l10 16 10-16h20v32H70V34L58 52h-8L38 34v18H24z" fill="#56337a"/>
+  <text x="98" y="33" fill="#2b2630" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Amsterdam</text>
+  <text x="98" y="52" fill="#56337a" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">UMC</text>
+</svg>

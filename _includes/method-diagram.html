@@ -15,4 +15,9 @@
       </a>
     {% endfor %}
   </div>
+  <div class="method-actions" aria-label="Method result links">
+    {% for action in method.actions %}
+      <a class="button primary" href="{{ action.href }}">{{ action.label }}</a>
+    {% endfor %}
+  </div>
 </section>

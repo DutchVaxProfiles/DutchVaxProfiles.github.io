@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">ZonMw logo</title>
+  <rect width="220" height="72" rx="8" fill="#ffffff"/>
+  <path d="M28 20h45L45 52h30" fill="none" stroke="#1f78b4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 20h18l12 19 12-19h18v32h-14V34l-12 18h-8L84 34v18H72z" fill="#e03c8a"/>
+  <text x="144" y="45" fill="#1f78b4" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">ZonMw</text>
+</svg>

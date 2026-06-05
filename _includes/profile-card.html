@@ -1,4 +1,4 @@
-<article class="profile-card{% if include.profile.compact %} profile-card--tiny{% endif %}" style="--span: {{ include.profile.span }}; --edge: {{ include.profile.edge }}; --intent-bg: {{ include.profile.intent_bg }};">
+<article class="profile-card" style="--edge: {{ include.profile.edge }}; --intent-bg: {{ include.profile.intent_bg }}; --marker-size: {{ include.profile.marker_size }}px;">
   <div class="profile-card-top">
     <span>{{ include.profile.id }}</span>
     <span>{{ include.profile.family }}</span>
@@ -6,4 +6,5 @@
   <p class="profile-card-share">{{ include.profile.share }} share</p>
   <p class="profile-card-intention">{{ include.profile.intention }}</p>
   <p>{{ include.profile.note }}</p>
+  <span class="profile-size-marker" aria-label="{{ include.profile.share }} profile share"></span>
 </article>

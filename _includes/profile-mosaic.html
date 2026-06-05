@@ -1,15 +1,5 @@
-{% assign positive_profiles = site.data.survey_profiles.profiles | where: "row", "positive" %}
-{% assign other_profiles = site.data.survey_profiles.profiles | where: "row", "other" %}
-
 <div class="profile-mosaic" aria-label="Twelve survey profiles by share and vaccination intention">
-  <div class="profile-mosaic-row profile-mosaic-row--positive" aria-label="Positive survey profiles">
-    {% for profile in positive_profiles %}
-      {% include profile-card.html profile=profile %}
-    {% endfor %}
-  </div>
-  <div class="profile-mosaic-row profile-mosaic-row--other" aria-label="Neutral and negative survey profiles">
-    {% for profile in other_profiles %}
-      {% include profile-card.html profile=profile %}
-    {% endfor %}
-  </div>
+  {% for profile in site.data.survey_profiles.profiles %}
+    {% include profile-card.html profile=profile %}
+  {% endfor %}
 </div>

@@ -1,0 +1,7 @@
+<div class="partner-logos{% if include.class_name %} {{ include.class_name }}{% endif %}" aria-label="Project partners and funder">
+  {% for partner in site.data.site.partners %}
+    <a href="{{ partner.url }}" class="partner-logo" aria-label="{{ partner.name }}">
+      <img src="{{ partner.logo | relative_url }}" alt="{{ partner.alt }}">
+    </a>
+  {% endfor %}
+</div>

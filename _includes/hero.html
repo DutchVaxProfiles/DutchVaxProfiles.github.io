@@ -1,16 +1,23 @@
 {% assign hero = site.data.site.hero %}
 
 <section class="hero" id="overview">
-  <p class="eyebrow">{{ hero.eyebrow }}</p>
-  <h1>{{ hero.title }}</h1>
-  <p class="lead">{{ hero.lead }}</p>
-  {% for paragraph in hero.paragraphs %}
-    <p>{{ paragraph }}</p>
-  {% endfor %}
-  <p class="funder-note">{{ hero.funder_note }}</p>
-  <div class="hero-actions" aria-label="Primary page links">
-    {% for action in hero.actions %}
-      <a class="button {{ action.style }}" href="{{ action.href }}">{{ action.label }}</a>
-    {% endfor %}
+  <div class="hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ hero.eyebrow }}</p>
+      <h1>{{ hero.title }}</h1>
+      <p class="lead">{{ hero.lead }}</p>
+      {% for paragraph in hero.paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+      <div class="hero-actions" aria-label="Primary page links">
+        {% for action in hero.actions %}
+          <a class="button {{ action.style }}" href="{{ action.href }}">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <aside class="hero-support" aria-label="Project partners and funding">
+      {% include partner-logos.html class_name="hero-logos" %}
+      <p class="funder-note">{{ hero.funder_note }}</p>
+    </aside>
   </div>
 </section>

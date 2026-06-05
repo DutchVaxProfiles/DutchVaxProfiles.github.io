@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="72" viewBox="0 0 220 72" role="img" aria-labelledby="title">
+  <title id="title">Utrecht University logo</title>
+  <rect width="220" height="72" rx="8" fill="#ffffff"/>
+  <rect x="22" y="16" width="48" height="48" rx="4" fill="#ffcd00"/>
+  <circle cx="46" cy="40" r="15" fill="#202020"/>
+  <path d="M46 21v38M27 40h38M32.5 26.5l27 27M59.5 26.5l-27 27" stroke="#ffcd00" stroke-width="4"/>
+  <text x="86" y="33" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Utrecht</text>
+  <text x="86" y="52" fill="#202020" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">University</text>
+</svg>

@@ -8,7 +8,7 @@ hero:
   lead: "Understanding how vaccination decisions differ across people and places in the Netherlands."
   paragraphs:
     - "Vaccination uptake is shaped by more than information alone. People differ in how they weigh disease risk, vaccine benefits, social expectations, autonomy, trust, and practical confidence. This project connects two kinds of evidence: detailed survey profiles that explain decision patterns, and broader mapped profile groups that can support local pandemic preparedness."
-  funder_note: "Funded by ZonMw through the Kennisprogramma Pandemische Paraatheid (grant 10710062310013), this project develops modelling tools to understand vaccination decision profiles and support more targeted public health interventions."
+  funder_note: "Funded by ZonMw through the Kennisprogramma Pandemische Paraatheid (grant 10710062310013)."
   actions:
     - label: "Compare the 12 survey profiles"
       href: "#survey-profiles"
@@ -16,17 +16,6 @@ hero:
     - label: "View the wijk map"
       href: "#map"
       style: "secondary"
-
-summary:
-  - number: "12"
-    title: "Survey profiles"
-    text: "Study 1 uses rich LISS survey measures to identify fine-grained vaccination decision profiles."
-  - number: "5"
-    title: "Mapped groups"
-    text: "Study 2 maps broader groups because registry data cannot reliably predict all twelve profiles."
-  - number: "wijk"
-    title: "Local view"
-    text: "The map is built for neighbourhood-scale discussion without labelling individual people."
 
 method:
   eyebrow: "Method in brief"
@@ -49,6 +38,15 @@ method:
       title: "Translate into lessons"
       text: "The results guide questions for communication, planning, and preparedness."
       href: "#lessons"
+  actions:
+    - label: "Explore the 12 vaccination profiles"
+      href: "#survey-profiles"
+    - label: "Compare their differences"
+      href: "#profile-differences"
+    - label: "View them in a map"
+      href: "#map"
+    - label: "See main lessons"
+      href: "#lessons"
 
 map:
   eyebrow: "Study 2"
@@ -70,3 +68,21 @@ funder:
   amount: "EUR 359,837"
   duration: "15 months"
   text: "The project is funded by ZonMw through the Kennisprogramma Pandemische Paraatheid. The awarded project develops modelling tools to estimate vaccination decision profile distributions at population and local levels, with the aim of informing more targeted vaccination interventions."
+
+partners:
+  - name: "Amsterdam UMC"
+    logo: "/assets/img/partners/amsterdam-umc.svg"
+    url: "https://www.amsterdamumc.org/"
+    alt: "Amsterdam UMC logo"
+  - name: "Utrecht University"
+    logo: "/assets/img/partners/utrecht-university.svg"
+    url: "https://www.uu.nl/en"
+    alt: "Utrecht University logo"
+  - name: "ODISSEI SoDa"
+    logo: "/assets/img/partners/odissei-soda.svg"
+    url: "https://odissei-data.nl/"
+    alt: "ODISSEI SoDa logo"
+  - name: "ZonMw"
+    logo: "/assets/img/partners/zonmw.svg"
+    url: "https://www.zonmw.nl/en"
+    alt: "ZonMw logo"

@@ -16,131 +16,120 @@ groups:
 
 visual:
   title: "Profile size and July 2021 vaccination intention"
-  text: "Wider boxes represent larger profile shares. The fill colour tracks July 2021 vaccination intention from lower blue to higher red. The left edge marks the profile family: positive, neutral, or negative."
-  scale_label: "Lower to higher intention"
+  text: "Each card has the same size. The fill colour tracks July 2021 vaccination intention from lower red to higher blue. The left edge marks the profile family, and the small square shows profile share with area proportional to the share."
+  scale_label: "Lower intention (red) to higher intention (blue)"
   positive_edge_label: "Positive edge"
   neutral_edge_label: "Neutral edge"
   negative_edge_label: "Negative edge"
+  share_marker_label: "Square area = profile share"
 
 profiles:
   - id: "P1"
     family: "Positive"
     row: "positive"
-    span: 2
-    compact: false
-    edge: "#1f7a63"
-    intent_bg: "#e9b8b5"
+    edge: "#2d67b1"
+    intent_bg: "#b8d4ec"
     share: "6.9%"
+    marker_size: 25
     intention: "93.1% July intention"
     note: "Strong positive beliefs and a clear moral or social pro-vaccination signal."
   - id: "P2"
     family: "Positive"
     row: "positive"
-    span: 2
-    compact: false
-    edge: "#1f7a63"
-    intent_bg: "#efd0ca"
+    edge: "#2d67b1"
+    intent_bg: "#d5e5f2"
     share: "11.1%"
+    marker_size: 31
     intention: "84.6% July intention"
     note: "Generally accepting, with a more mixed or less decisive profile than the strongest positive groups."
   - id: "P3"
     family: "Positive"
     row: "positive"
-    span: 2
-    compact: false
-    edge: "#1f7a63"
-    intent_bg: "#e8b5b4"
+    edge: "#2d67b1"
+    intent_bg: "#b3d0eb"
     share: "12.8%"
+    marker_size: 34
     intention: "94.2% July intention"
     note: "Consistently positive vaccine beliefs, social norms, and perceived benefits."
   - id: "P4"
     family: "Positive"
     row: "positive"
-    span: 4
-    compact: false
-    edge: "#1f7a63"
-    intent_bg: "#ecc4bf"
+    edge: "#2d67b1"
+    intent_bg: "#cce0f0"
     share: "24.0%"
+    marker_size: 46
     intention: "88.6% July intention"
     note: "Largest profile; broadly accepting with moderately strong positive beliefs."
   - id: "P5"
     family: "Positive"
     row: "positive"
-    span: 2
-    compact: false
-    edge: "#1f7a63"
-    intent_bg: "#f1d8d0"
+    edge: "#2d67b1"
+    intent_bg: "#e0ebf4"
     share: "9.4%"
+    marker_size: 29
     intention: "81.7% July intention"
     note: "Positive overall, but with more room for practical questions or ambivalent feelings."
   - id: "P6"
     family: "Positive"
     row: "positive"
-    span: 1
-    compact: true
-    edge: "#1f7a63"
-    intent_bg: "#e9bcb8"
+    edge: "#2d67b1"
+    intent_bg: "#c0d9ee"
     share: "1.9%"
+    marker_size: 13
     intention: "92.0% intention"
     note: "Small high-intention profile."
   - id: "P7"
     family: "Neutral"
     row: "other"
-    span: 4
-    compact: false
     edge: "#c0972e"
-    intent_bg: "#eadfda"
+    intent_bg: "#f1dfd8"
     share: "11.6%"
+    marker_size: 32
     intention: "60.9% July intention"
     note: "Middle intention; support may depend on reducing uncertainty and clarifying benefits."
   - id: "P8"
     family: "Neutral"
     row: "other"
-    span: 4
-    compact: false
     edge: "#c0972e"
-    intent_bg: "#eee2dc"
+    intent_bg: "#e9e9e1"
     share: "11.6%"
+    marker_size: 32
     intention: "67.7% July intention"
     note: "Neutral but somewhat more inclined toward vaccination than the other neutral profiles."
   - id: "P9"
     family: "Neutral"
     row: "other"
-    span: 1
-    compact: true
     edge: "#c0972e"
-    intent_bg: "#e7e2df"
+    intent_bg: "#efcfc5"
     share: "3.4%"
+    marker_size: 17
     intention: "49.7% intention"
     note: "More hesitant neutral profile where autonomy and freedom may weigh more strongly."
   - id: "P10"
     family: "Negative"
     row: "other"
-    span: 1
-    compact: true
     edge: "#b5534b"
-    intent_bg: "#cad9e6"
+    intent_bg: "#df8d7c"
     share: "2.7%"
+    marker_size: 15
     intention: "19.5% intention"
     note: "Low intention profile."
   - id: "P11"
     family: "Negative"
     row: "other"
-    span: 1
-    compact: true
     edge: "#b5534b"
-    intent_bg: "#c5d7e5"
+    intent_bg: "#d9786d"
     share: "3.4%"
+    marker_size: 17
     intention: "15.2% intention"
     note: "Lowest intention profile."
   - id: "P12"
     family: "Negative"
     row: "other"
-    span: 1
-    compact: true
     edge: "#b5534b"
-    intent_bg: "#dbe2e6"
+    intent_bg: "#eeb9ad"
     share: "1.2%"
+    marker_size: 10
     intention: "37.7% intention"
     note: "Small negative profile."
 
