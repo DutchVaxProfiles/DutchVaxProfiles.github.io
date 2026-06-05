@@ -1,12 +1,17 @@
-<article class="profile-card" style="--edge: {{ include.profile.edge }}; --intent-bg: {{ include.profile.intent_bg }}; --marker-size: {{ include.profile.marker_size }}px;">
+<article class="profile-card" style="--edge: {{ include.profile.edge }}; --intent-bg: {{ include.profile.intent_bg }};">
   <div class="profile-card-top">
     <span>{{ include.profile.family }}</span>
   </div>
   <h3 class="profile-card-title">{{ include.profile.id }}</h3>
-  <p class="profile-card-intention">{{ include.profile.intention }}</p>
+  <dl class="profile-card-metrics">
+    <div>
+      <dt>Share of population</dt>
+      <dd>{{ include.profile.share }}</dd>
+    </div>
+    <div>
+      <dt>Intention to vaccinate</dt>
+      <dd>{{ include.profile.intention }}</dd>
+    </div>
+  </dl>
   <p>{{ include.profile.note }}</p>
-  <span class="profile-size-marker" aria-label="{{ include.profile.share }} profile share">
-    <strong>{{ include.profile.share }}</strong>
-    <small>share</small>
-  </span>
 </article>

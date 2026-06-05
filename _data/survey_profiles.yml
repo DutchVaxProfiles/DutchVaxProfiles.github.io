@@ -1,7 +1,7 @@
 section:
   eyebrow: "Study 1"
   title: "The 12 vaccination decision profiles"
-  intro: "The first paper uses Latent Profile Analysis in a representative Dutch LISS sample to identify 12 COVID-19 vaccination decision profiles. These are population patterns, not labels for individual people. The 12-profile solution preserves the psychological nuance that is needed to understand why people with similar intentions may still need different kinds of communication and support."
+  intro: "The first paper uses latent profile analysis in a representative Dutch LISS sample to identify 12 COVID-19 vaccination decision profiles. These are population patterns, not labels for individual people. The 12-profile solution preserves psychological nuance, showing why people with similar intentions may still need different kinds of communication and support."
 
 groups:
   - class_name: "positive-group"
@@ -15,13 +15,12 @@ groups:
     text: "These smaller profiles have lower vaccination intention. They differ most in vaccine beliefs and individual values such as autonomy, freedom, naturalness, and purity concerns."
 
 visual:
-  title: "Profile size and July 2021 vaccination intention"
-  text: "Each card has the same size. The fill colour tracks July 2021 vaccination intention from lower red to higher blue. The left edge marks the profile family, and the square label shows profile share with area proportional to the share."
-  scale_label: "Lower intention (red) to higher intention (blue)"
-  positive_edge_label: "Positive edge"
-  neutral_edge_label: "Neutral edge"
-  negative_edge_label: "Negative edge"
-  share_marker_label: "Square area and label = profile share"
+  title: "Profile share and intention to vaccinate"
+  text: "Each card shows the profile's share of the study population and the percentage who intended to vaccinate in July 2021. The fill colour tracks intention to vaccinate from lower red to higher blue. The left edge marks the profile family."
+  scale_label: "Lower intention to vaccinate (red) to higher intention (blue)"
+  positive_edge_label: "Positive profiles"
+  neutral_edge_label: "Neutral profiles"
+  negative_edge_label: "Negative profiles"
 
 profiles:
   - id: "P1"
@@ -30,8 +29,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#7fb2d7"
     share: "6.9%"
-    marker_size: 47
-    intention: "93.1% July intention"
+    intention: "93.1%"
     note: "Strong positive beliefs and a clear moral or social pro-vaccination signal."
   - id: "P2"
     family: "Positive"
@@ -39,8 +37,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#a9cfe1"
     share: "11.1%"
-    marker_size: 53
-    intention: "84.6% July intention"
+    intention: "84.6%"
     note: "Generally accepting, with a more mixed or less decisive profile than the strongest positive groups."
   - id: "P3"
     family: "Positive"
@@ -48,8 +45,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#78acd3"
     share: "12.8%"
-    marker_size: 55
-    intention: "94.2% July intention"
+    intention: "94.2%"
     note: "Consistently positive vaccine beliefs, social norms, and perceived benefits."
   - id: "P4"
     family: "Positive"
@@ -57,8 +53,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#99c5e1"
     share: "24.0%"
-    marker_size: 66
-    intention: "88.6% July intention"
+    intention: "88.6%"
     note: "Largest profile; broadly accepting with moderately strong positive beliefs."
   - id: "P5"
     family: "Positive"
@@ -66,8 +61,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#b8d7de"
     share: "9.4%"
-    marker_size: 50
-    intention: "81.7% July intention"
+    intention: "81.7%"
     note: "Positive overall, but with more room for practical questions or ambivalent feelings."
   - id: "P6"
     family: "Positive"
@@ -75,8 +69,7 @@ profiles:
     edge: "#2d67b1"
     intent_bg: "#86b8db"
     share: "1.9%"
-    marker_size: 36
-    intention: "92.0% intention"
+    intention: "92.0%"
     note: "Small high-intention profile."
   - id: "P7"
     family: "Neutral"
@@ -84,8 +77,7 @@ profiles:
     edge: "#c0972e"
     intent_bg: "#ddd99d"
     share: "11.6%"
-    marker_size: 53
-    intention: "60.9% July intention"
+    intention: "60.9%"
     note: "Middle intention; support may depend on reducing uncertainty and clarifying benefits."
   - id: "P8"
     family: "Neutral"
@@ -93,8 +85,7 @@ profiles:
     edge: "#c0972e"
     intent_bg: "#c7d8bb"
     share: "11.6%"
-    marker_size: 53
-    intention: "67.7% July intention"
+    intention: "67.7%"
     note: "Neutral but somewhat more inclined toward vaccination than the other neutral profiles."
   - id: "P9"
     family: "Neutral"
@@ -102,8 +93,7 @@ profiles:
     edge: "#c0972e"
     intent_bg: "#f2cf72"
     share: "3.4%"
-    marker_size: 40
-    intention: "49.7% intention"
+    intention: "49.7%"
     note: "More hesitant neutral profile where autonomy and freedom may weigh more strongly."
   - id: "P10"
     family: "Negative"
@@ -111,8 +101,7 @@ profiles:
     edge: "#b5534b"
     intent_bg: "#e17462"
     share: "2.7%"
-    marker_size: 38
-    intention: "19.5% intention"
+    intention: "19.5%"
     note: "Low intention profile."
   - id: "P11"
     family: "Negative"
@@ -120,8 +109,7 @@ profiles:
     edge: "#b5534b"
     intent_bg: "#de5f55"
     share: "3.4%"
-    marker_size: 40
-    intention: "15.2% intention"
+    intention: "15.2%"
     note: "Lowest intention profile."
   - id: "P12"
     family: "Negative"
@@ -129,8 +117,7 @@ profiles:
     edge: "#b5534b"
     intent_bg: "#eda88b"
     share: "1.2%"
-    marker_size: 33
-    intention: "37.7% intention"
+    intention: "37.7%"
     note: "Small negative profile."
 
 table:

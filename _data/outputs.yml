@@ -1,10 +1,10 @@
 items:
   - label: "Paper 1"
-    text: "How Did People Make COVID-19 Vaccination Decisions: A Latent-Profile Modelling Approach. Manuscript in preparation."
+    text: "How did people make COVID-19 vaccination decisions? A latent-profile modelling approach. Manuscript in preparation."
   - label: "Paper 2"
     text: "Modelling the distribution of COVID-19 vaccination decision profiles in the Netherlands using CBS registry data. Manuscript in preparation."
   - label: "Map explorer"
-    text: "Wijk-level map of five broader vaccination profile groups."
+    text: "Interactive wijk-level map of five broader vaccination profile groups."
   - label: "Study 1 preregistration"
     text: "OSF registration."
     url: "https://osf.io/y3qgt/?view_only=bc485ce658214be9bde9e35ea76ddec8"
