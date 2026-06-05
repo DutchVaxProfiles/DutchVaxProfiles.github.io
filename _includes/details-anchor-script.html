@@ -1,0 +1,33 @@
+<script>
+  (() => {
+    function openDetailsForHash(hash) {
+      if (!hash || hash === "#") return;
+
+      let targetId;
+      try {
+        targetId = decodeURIComponent(hash.slice(1));
+      } catch {
+        return;
+      }
+
+      const target = document.getElementById(targetId);
+      if (!target) return;
+
+      const details = target.tagName === "DETAILS" ? target : target.closest("details");
+      if (!details) return;
+
+      details.open = true;
+      requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    }
+
+    document.addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) return;
+
+      const link = event.target.closest('a[href^="#"]');
+      if (link) openDetailsForHash(link.hash);
+    });
+
+    window.addEventListener("hashchange", () => openDetailsForHash(window.location.hash));
+    window.addEventListener("DOMContentLoaded", () => openDetailsForHash(window.location.hash));
+  })();
+</script>
