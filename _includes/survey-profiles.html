@@ -1,0 +1,48 @@
+{% assign survey = site.data.survey_profiles %}
+
+<section id="survey-profiles" class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ survey.section.eyebrow }}</p>
+    <h2>{{ survey.section.title }}</h2>
+    <p>{{ survey.section.intro }}</p>
+  </div>
+
+  {% include profile-groups.html groups=survey.groups %}
+
+  <div class="profile-visual-heading">
+    <div>
+      <h3>{{ survey.visual.title }}</h3>
+      <p>{{ survey.visual.text }}</p>
+    </div>
+    <div class="profile-legend" aria-label="Profile card legend">
+      <span class="intention-scale"><i></i>{{ survey.visual.scale_label }}</span>
+      <span><i class="legend-edge positive-edge"></i>{{ survey.visual.positive_edge_label }}</span>
+      <span><i class="legend-edge neutral-edge"></i>{{ survey.visual.neutral_edge_label }}</span>
+      <span><i class="legend-edge negative-edge"></i>{{ survey.visual.negative_edge_label }}</span>
+    </div>
+  </div>
+
+  {% include profile-mosaic.html %}
+
+  <details class="plot-details">
+    <summary>{{ survey.details.first_summary }}</summary>
+    <figure class="wide-figure">
+      <img src="{{ survey.details.indicator_figure.image | relative_url }}" alt="{{ survey.details.indicator_figure.alt }}">
+      <figcaption>{{ survey.details.indicator_figure.caption }}</figcaption>
+    </figure>
+
+    {% include profile-table.html %}
+  </details>
+
+  <details class="plot-details">
+    <summary>{{ survey.details.second_summary }}</summary>
+    <div class="details-grid">
+      {% for figure in survey.details.differentiators %}
+        <figure>
+          <img src="{{ figure.image | relative_url }}" alt="{{ figure.alt }}">
+          <figcaption>{{ figure.caption }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </details>
+</section>

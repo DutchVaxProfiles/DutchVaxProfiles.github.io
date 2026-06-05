@@ -1,0 +1,66 @@
+{% assign team = site.data.team %}
+{% assign funder = site.data.site.funder %}
+
+<section id="team" class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ team.section.eyebrow }}</p>
+    <h2>{{ team.section.title }}</h2>
+  </div>
+
+  <div class="team-grid people-grid">
+    {% for person in team.people %}
+      <article class="person-card">
+        <a href="{{ person.url }}" class="person-link">
+          {% if person.image %}
+            <img src="{{ person.image | relative_url }}" alt="{{ person.alt }}">
+          {% else %}
+            <span class="person-initials" aria-hidden="true">{{ person.initials }}</span>
+          {% endif %}
+          <span>
+            <strong>{{ person.name }}</strong>
+            <small>{{ person.role }}</small>
+          </span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="outputs funder-card">
+    <h3>Funder</h3>
+    <p>{{ funder.text }}</p>
+    <dl class="funder-meta">
+      <div>
+        <dt>Funder</dt>
+        <dd>{{ funder.name }}</dd>
+      </div>
+      <div>
+        <dt>Grant</dt>
+        <dd>{{ funder.grant_number }}</dd>
+      </div>
+      <div>
+        <dt>Programme</dt>
+        <dd>{{ funder.programme }}</dd>
+      </div>
+      <div>
+        <dt>Project title</dt>
+        <dd>{{ funder.project_title }}</dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="outputs">
+    <h3>Outputs</h3>
+    <ul>
+      {% for output in site.data.outputs.items %}
+        <li>
+          <strong>{{ output.label }}:</strong>
+          {% if output.url %}
+            <a href="{{ output.url }}" aria-label="{{ output.url_label }}">{{ output.text }}</a>
+          {% else %}
+            {{ output.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

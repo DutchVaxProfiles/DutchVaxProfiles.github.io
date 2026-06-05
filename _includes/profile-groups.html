@@ -1,0 +1,8 @@
+<div class="profile-groups{% if include.extra_class %} {{ include.extra_class }}{% endif %}"{% if include.label %} aria-label="{{ include.label }}"{% endif %}>
+  {% for group in include.groups %}
+    <article class="{{ group.class_name }}">
+      <h3>{{ group.title }}</h3>
+      <p>{{ group.text }}</p>
+    </article>
+  {% endfor %}
+</div>

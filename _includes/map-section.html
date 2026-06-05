@@ -1,0 +1,23 @@
+{% assign map = site.data.site.map %}
+
+<section id="map" class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ map.eyebrow }}</p>
+    <h2>{{ map.title }}</h2>
+    <p>{{ map.intro }}</p>
+  </div>
+
+  {% include profile-groups.html groups=site.data.map_groups.groups extra_class="map-groups" label="Mapped profile group families" %}
+
+  <details class="plot-details map-note" open>
+    <summary>{{ map.note_summary }}</summary>
+    <p>{{ map.note_text }}</p>
+  </details>
+
+  <div class="map-frame">
+    <iframe title="{{ map.iframe_title }}" src="{{ map.iframe_url }}" loading="lazy"></iframe>
+  </div>
+  <p class="map-fallback">
+    <a href="{{ map.iframe_url }}">{{ map.fallback_label }}</a>.
+  </p>
+</section>

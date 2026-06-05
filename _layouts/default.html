@@ -15,7 +15,7 @@
         <span class="brand-mark" aria-hidden="true">DVP</span>
         <span>
           <span class="brand-name">{{ site.title }}</span>
-          <span class="brand-subtitle">Why We Vax research project</span>
+          <span class="brand-subtitle">{{ site.data.site.subtitle }}</span>
         </span>
       </a>
       <nav aria-label="Main navigation">
@@ -33,8 +33,10 @@
 
     <footer class="site-footer">
       <p>
-        Dutch Vaccination Profiles is a collaboration between Utrecht University
-        and Amsterdam UMC, funded through ZonMw pandemic preparedness research.
+        Dutch Vaccination Profiles is a collaboration between
+        {{ site.data.site.collaboration }}, funded by {{ site.data.site.funder.name }}
+        through {{ site.data.site.funder.programme }} (grant
+        {{ site.data.site.funder.grant_number }}).
       </p>
       <p class="footer-links">
         <a href="https://osf.io/y3qgt/?view_only=bc485ce658214be9bde9e35ea76ddec8">Study 1 OSF</a>

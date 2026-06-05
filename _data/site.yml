@@ -1,0 +1,72 @@
+title: "Dutch Vaccination Profiles"
+subtitle: "Understanding heterogeneity in vaccination decisions"
+collaboration: "Utrecht University and Amsterdam UMC"
+
+hero:
+  eyebrow: "Project overview"
+  title: "Dutch Vaccination Profiles"
+  lead: "Understanding how vaccination decisions differ across people and places in the Netherlands."
+  paragraphs:
+    - "Vaccination uptake is shaped by more than information alone. People differ in how they weigh disease risk, vaccine benefits, social expectations, autonomy, trust, and practical confidence. This project connects two kinds of evidence: detailed survey profiles that explain decision patterns, and broader mapped profile groups that can support local pandemic preparedness."
+  funder_note: "Funded by ZonMw through the Kennisprogramma Pandemische Paraatheid (grant 10710062310013), this project develops modelling tools to understand vaccination decision profiles and support more targeted public health interventions."
+  actions:
+    - label: "Compare the 12 survey profiles"
+      href: "#survey-profiles"
+      style: "primary"
+    - label: "View the wijk map"
+      href: "#map"
+      style: "secondary"
+
+summary:
+  - number: "12"
+    title: "Survey profiles"
+    text: "Study 1 uses rich LISS survey measures to identify fine-grained vaccination decision profiles."
+  - number: "5"
+    title: "Mapped groups"
+    text: "Study 2 maps broader groups because registry data cannot reliably predict all twelve profiles."
+  - number: "wijk"
+    title: "Local view"
+    text: "The map is built for neighbourhood-scale discussion without labelling individual people."
+
+method:
+  eyebrow: "Method in brief"
+  title: "How the pieces connect"
+  intro: "The project starts with psychological detail and then asks what can be mapped responsibly. Follow the steps below to jump to the main results: the 12 survey profiles, the 5 mapped groups, and the lessons for vaccination practice and research."
+  steps:
+    - number: "1"
+      title: "Discover 12 survey profiles"
+      text: "LISS survey measures capture beliefs, values, norms, and intentions."
+      href: "#survey-profiles"
+    - number: "2"
+      title: "Characterize differences"
+      text: "Profiles are compared on trust, decision style, knowledge, and demographics."
+      href: "#survey-profiles"
+    - number: "3"
+      title: "Map 5 broader groups"
+      text: "CBS-linked variables support a more aggregated wijk-level view."
+      href: "#map"
+    - number: "4"
+      title: "Translate into lessons"
+      text: "The results guide questions for communication, planning, and preparedness."
+      href: "#lessons"
+
+map:
+  eyebrow: "Study 2"
+  title: "Mapping vaccination profile groups across Dutch wijken"
+  intro: "The map shows five broad profile groups at wijk level. These five groups combine the twelve survey profiles from Study 1 into three positive groups, one neutral group, and one negative group. This is the key modelling compromise: less psychological nuance than the 12-profile survey solution, but a more reliable basis for mapping with registry data."
+  note_summary: "How to read the current Study 2 map"
+  note_text: "The current Study 2 map is not the real CBS-linked model output yet. It is included so the team can test the interface, labels, colour scale, and practitioner-facing story before the final wijk estimates are added. Values are percentages, shown at aggregate level only; missing values are shown in gray."
+  iframe_title: "Dutch vaccination profile group wijk map"
+  iframe_url: "https://dutchvaxprofiles.github.io/map-explorer/"
+  fallback_label: "Open the map in a separate tab"
+
+funder:
+  name: "ZonMw"
+  grant_number: "10710062310013"
+  programme: "Kennisprogramma Pandemische Paraatheid"
+  call: "Modelleren voor Pandemische Paraatheid: een oproep tot innovatie en kennisontwikkeling"
+  project_title: "Het modelleren van vaccinatie keuze profielen van burgers voor doelgerichtere interventies"
+  award_date: "1 July 2024"
+  amount: "EUR 359,837"
+  duration: "15 months"
+  text: "The project is funded by ZonMw through the Kennisprogramma Pandemische Paraatheid. The awarded project develops modelling tools to estimate vaccination decision profile distributions at population and local levels, with the aim of informing more targeted vaccination interventions."

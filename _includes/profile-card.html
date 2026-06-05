@@ -1,0 +1,9 @@
+<article class="profile-card{% if include.profile.compact %} profile-card--tiny{% endif %}" style="--span: {{ include.profile.span }}; --edge: {{ include.profile.edge }}; --intent-bg: {{ include.profile.intent_bg }};">
+  <div class="profile-card-top">
+    <span>{{ include.profile.id }}</span>
+    <span>{{ include.profile.family }}</span>
+  </div>
+  <p class="profile-card-share">{{ include.profile.share }} share</p>
+  <p class="profile-card-intention">{{ include.profile.intention }}</p>
+  <p>{{ include.profile.note }}</p>
+</article>

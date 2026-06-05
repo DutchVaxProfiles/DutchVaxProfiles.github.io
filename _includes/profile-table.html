@@ -1,0 +1,26 @@
+<div class="table-wrap" role="region" aria-label="Profile size and vaccination intentions" tabindex="0">
+  <table>
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Group</th>
+        <th>N</th>
+        <th>%</th>
+        <th>Jan 2021 intention</th>
+        <th>Jul 2021 intention</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in site.data.survey_profiles.table %}
+        <tr>
+          <td>{{ row.profile }}</td>
+          <td>{{ row.group }}</td>
+          <td>{{ row.n }}</td>
+          <td>{{ row.share }}</td>
+          <td>{{ row.january_intention }}</td>
+          <td>{{ row.july_intention }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

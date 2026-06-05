@@ -137,6 +137,7 @@ th {
   color: var(--ink);
   display: inline-flex;
   gap: 0.75rem;
+  min-width: 0;
   text-decoration: none;
 }
 
@@ -158,6 +159,10 @@ th {
   display: block;
 }
 
+.brand > span:last-child {
+  min-width: 0;
+}
+
 .brand-name {
   font-weight: 700;
   line-height: 1.2;
@@ -167,6 +172,7 @@ th {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 .site-header nav {
@@ -212,6 +218,15 @@ main {
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 780px;
+}
+
+.hero p.funder-note {
+  background: var(--surface-muted);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius);
+  color: var(--ink);
+  margin-top: 1.2rem;
+  padding: 1rem;
 }
 
 .eyebrow {
@@ -347,11 +362,23 @@ figcaption {
   border-top: 5px solid #87bf83;
 }
 
+.profile-groups article.positive-group {
+  border-top: 5px solid #87bf83;
+}
+
 .profile-groups article:nth-child(2) {
   border-top: 5px solid #d8b75a;
 }
 
+.profile-groups article.neutral-group {
+  border-top: 5px solid #d8b75a;
+}
+
 .profile-groups article:nth-child(3) {
+  border-top: 5px solid #cf7f7d;
+}
+
+.profile-groups article.negative-group {
   border-top: 5px solid #cf7f7d;
 }
 
@@ -485,6 +512,7 @@ figcaption {
 
 .profile-card--tiny {
   border-left-width: 5px;
+  overflow-wrap: anywhere;
   padding: 0.75rem;
 }
 
@@ -500,7 +528,7 @@ figcaption {
 }
 
 .profile-card--tiny .profile-card-share {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .profile-card--tiny .profile-card-intention {
@@ -717,6 +745,34 @@ figcaption {
   margin-bottom: 0;
 }
 
+.funder-card {
+  background: var(--surface-muted);
+}
+
+.funder-meta {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1rem 0 0;
+}
+
+.funder-meta div {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.funder-meta dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.funder-meta dd {
+  margin: 0.2rem 0 0;
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -751,7 +807,8 @@ figcaption {
   .profile-groups,
   .insight-list,
   .team-grid,
-  .details-grid {
+  .details-grid,
+  .funder-meta {
     grid-template-columns: 1fr;
   }
 
@@ -798,6 +855,23 @@ figcaption {
   .hero-actions,
   .button {
     width: 100%;
+  }
+
+  .brand {
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .brand > span:last-child {
+    flex: 1 1 auto;
+    max-width: calc(100vw - 6rem);
+    width: calc(100vw - 6rem);
+  }
+
+  .brand-subtitle {
+    max-width: 100%;
+    white-space: normal;
   }
 
   .button {
